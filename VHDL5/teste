@@ -1,0 +1,8 @@
+vsim multiplicador
+
+add wave *
+
+force A_M "11111111" 0ns 
+force B_M "11111111" 0ns 
+
+run 10ns

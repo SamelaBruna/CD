@@ -1,0 +1,32 @@
+
+vsim c7s
+
+add wave * 
+force SW(0) 0 0ns,  1 5ns -repeat 10ns
+force SW(1) 0 0ns, 1 10ns -repeat 20ns	
+force SW(2) 0 0ns, 1 20ns -repeat 40ns
+force SW(3) 0 0ns, 1 40ns -repeat 80ns
+run 80ns 
+
+
+
+vsim c7s
+
+add wave * 
+force SW "0000" 0ns
+force SW "0001" 10ns
+force SW "0010" 20ns
+force SW "0011" 30ns
+force SW "0100" 40ns
+force SW "0101" 50ns
+force SW "0110" 60ns
+force SW "0111" 70ns
+force SW "1000" 80ns
+force SW "1001" 90ns
+force SW "1010" 100ns
+force SW "1011" 110ns
+force SW "1100" 120ns
+force SW "1101" 130ns
+force SW "1110" 140ns
+force SW "1111" 150ns
+run 180ns 

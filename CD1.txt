@@ -30,3 +30,20 @@ force SW "1101" 130ns
 force SW "1110" 140ns
 force SW "1111" 150ns
 run 180ns 
+
+
+
+
+
+
+vsim Final
+
+add wave * 
+force A "1000" 0ns
+force En 0 0ns, 1 10ns , 0 15ns
+force Clr "11" 0ns, "00" 5ns
+force Clock 0 0ns, 1 2.5ns -repeat 5ns
+
+run 120ns 
+
+run 80ns 

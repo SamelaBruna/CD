@@ -1,0 +1,19 @@
+vsim Mealy 
+
+add wave *
+
+
+
+
+force Y 1 0ns
+
+force U 0 0ns, 1 10ns -repeat 20ns
+
+force clear 0 0ns, 1 0.02ns
+
+force clock 0 0ns, 1 2ns -repeat 4ns
+
+
+
+
+run 80ns

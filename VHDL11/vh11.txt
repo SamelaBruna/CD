@@ -1,0 +1,36 @@
+vsim datapath
+add wave *
+
+force Sd "00001000"
+force Ad "00000010"
+force lt_clr 0 0ns,1 1ns
+force lt_ld 0 2ns, 1 3ns
+force clockD 0 0ns, 1 5ns -repeat 10ns
+
+run 200ns
+
+
+---------------------------------------
+
+vsim controlador
+add wave *
+
+force C 1 6ns, 0 80ns
+force ltcompsaida 1 0ns
+force clr_c 0 0ns, 1 1ns 
+force clock_c 0 0ns, 1 5ns -repeat 10ns
+
+run 200ns
+
+-------------------------------------------
+
+vsim main11 
+add wave *
+
+force clock_m 0 0ns, 1 5ns -repeat 10ns
+force C_m 1 0ns, 0 66ns
+force A_m "00000010"
+force S_m "00001000"
+force clr_m 0 0ns, 1 1ns
+
+run 100ns 

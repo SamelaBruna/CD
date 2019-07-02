@@ -1,0 +1,8 @@
+vsim comparador
+add wave *
+
+force A "0000" 0ns, "0010" 1ns, "0011" 2ns
+force  B "0010" 0ns
+
+
+run 4ns

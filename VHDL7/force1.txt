@@ -1,0 +1,11 @@
+vsim bcdcontador
+add wave *
+
+force inHex1 "1000" 0ns 
+force inHex0 "0101" 0ns
+force bUD_bcd 0 0ns, 1 10ns
+force ld_bcd 0 0ns, 1 20ns, 0 22ns
+force Clr_bcd 1 0ns, 0 10ns
+force Clock_bcd 0 0ns, 1 5ns -repeat 10ns
+
+run 700ns

@@ -39,11 +39,20 @@ run 180ns
 vsim Final
 
 add wave * 
-force A "1000" 0ns
-force En 0 0ns, 1 10ns , 0 15ns
-force Clr "11" 0ns, "00" 5ns
-force Clock 0 0ns, 1 2.5ns -repeat 5ns
+force A "1001" 0ns
+force En 0 0ns, 1 3ns , 0 4ns
+force Clr "11" 0ns, "00" 1ns
+force Clock 0 0ns, 1 10ns -repeat 20ns
 
 run 120ns 
 
-run 80ns 
+
+vsim transmis
+
+add wave *
+force S "1001" 0ns
+force enable 0 0ns, 1 3ns, 0 4ns
+force K "11" 0ns, "00" 1ns
+force CLK 0 0ns, 1 10ns -repeat 20ns
+
+run 120ns

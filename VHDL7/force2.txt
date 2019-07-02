@@ -1,0 +1,11 @@
+vsim contadorModulo
+add wave *
+
+force A "0101" 0ns, "0011" 30ns
+force ld 0 0ns, 1 5ns, 0 10ns, 1 30ns, 0 35ns
+force Clr 0 0ns, 1 2ns, 0 20ns
+force en 0 0ns, 1 35ns
+force bUD 0 0ns, 1 60ns, 0 90ns, 1 120ns, 0 270ns
+force Clock 0 0ns, 1 5ns -repeat 10ns
+
+run 400ns

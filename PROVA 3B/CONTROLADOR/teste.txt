@@ -1,0 +1,14 @@
+vsim MaqVenda
+add wave *
+
+force clk 0 0ms, 1 31.25ms -repeat 62.5ms
+force produto "00000000000000000000" 0ms, "10000000000000000000" 5ms
+force comp_gt 1 0ms
+force r 0 0ms, 1 5ms
+force comp_lt 1 4ms
+force moeda 1 10ms
+force s_cmp_timer 0 15ms
+force cancel 0 15ms
+
+run 800ms
+

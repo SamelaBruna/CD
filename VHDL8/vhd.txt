@@ -1,0 +1,10 @@
+vsim contA
+add wave *
+
+force Ac "0010" 
+force Bc "0111"
+force loadc 1 3ns,0 4ns 
+force Clrc 0 0ns,1 2ns
+force enc 1 5ns, 0 100ns
+force Clockc 0 0ns, 1 2ns -repeat 4ns
+run 200ns
